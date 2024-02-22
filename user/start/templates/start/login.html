@@ -1,7 +1,10 @@
 <!-- myapp/templates/login.html -->
+<div class="mode">
 <form method="POST">
     {% csrf_token %}
     <input type="email" name="email" placeholder="Email"><br>
     <input type="password" name="password" placeholder="Password"><br>
     <button type="submit">Login</button>
 </form>
+<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+</div>
